@@ -14,6 +14,7 @@
   <body>
     <div id="mySidenav" class="sidenav" >
       <div class="container">
+        <br>
         <h3 class="shead">Search for Hotels</h3>
       </div>
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -45,29 +46,22 @@
             <strong>Note: </strong>Please click on the menu to open the sidebar and click on cancel to close the sidebar.
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-6 sform">
-            <input id="places-search" class="form-control" type="text" placeholder="Ex: Hotels in Mumbai">
-          </div>
-          <div class="col-md-6">
-            <button id="go-places" type="submit" class="btn btn-primary">Search for nearby places</button>
-          </div>
-        </div><br>
-        <div id="map"></div>
-        <div class="container">
-              <div data-bind="visible: mapUnavailable">
-                  <h3>Sorry Google Maps is unable to load right now.<br>Please check your connection and refresh the page, or try again later.</h3>
-              </div>
+        <div class="jumbotron" data-bind="visible: mapUnavailable">
+                    <h3>Sorry Google Maps is unable to load right now.<br>Please check your connection and refresh the page, or try again later.</h3>
         </div>
+        <br>
+        <div id="map"></div>
       </div>
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+    <script src="js/mapsStyle.js"></script>
     <script src="js/main.js"></script>
     <script src="js/app.js"></script>
     <script async defer
-      src=
-      "https://maps.googleapis.com/maps/api/js?libraries=places,geometry,drawing&key=AIzaSyBJsIzDVD83bRkJUC7958Zyeo6oI-F35A4&v=3&callback=initMap"></script>
+            src="https://maps.googleapis.com/maps/api/js?libraries=places,geometry&key=AIzaSyBJsIzDVD83bRkJUC7958Zyeo6oI-F35A4&v=3&callback=initMap"
+            async defer onerror="mapError()">
+    </script>        
   </body>
 </html>

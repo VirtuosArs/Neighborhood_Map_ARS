@@ -1,6 +1,6 @@
 # ARS Neighborhood Map App
 
-This is a single page application featuring a map with hotels near Matunga, Mumbai. Clicking on the specific marker the user will get details of the restaurant or hotel via FoursquareAPI. Also the Search functionality is powered by the Google Maps API which allows the user to search any places around the world.
+This is a single page application featuring a map with hotels near Matunga, Mumbai. Clicking on the specific marker the user will get details of the restaurant or hotel via FoursquareAPI.
 
 
 ## Getting Started
